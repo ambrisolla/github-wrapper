@@ -2,11 +2,17 @@
 Script to list jobs for all Github Actions workflows. 
 
 ## Usage
-Export Github PAT
+Export Github PAT:
 ```bash
 $ export GH_PAT='your_GitHub_PAT'
+
+```
+Execute the following command
+
+```bash
 $ ./github-wrapper.py -r prometheus/prometheus -a get_jobs | jq
 ```
+Output:
 ```json
 {
   "job_count": 22,
